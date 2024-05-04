@@ -1,8 +1,8 @@
 {
   "name": "notepad-coop",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Giovanni Francesco Guarnieri",
+  "homepage": "https://giovanniguarnieri.com.br/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>Olá</ion-button>
+    </ion-buttons>
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="setTo('p')">
+        Parágrafo
+      </ion-button>
+      <ion-button (click)="setTo('h1')">
+        Título
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list class="bg-transparent">
+      <ion-item class="custom-x" *ngFor="let p of paragraphs; let i = index; trackBy:trackByIdx" color="none" lines="none">
+        <ion-textarea placeholder="Digite aqui..." 
+          [autoGrow]="true" 
+          (keydown)="textareaPress($event, i)" [value]="p"
+          class="item-{{i}} " 
+          [(ngModel)]="paragraphs[i]" 
+          class="custom"
+          (click)="changeCurrentElement(i)" 
+          (input)="changeCurrentElement(i)"
+          (focus)="changeCurrentElement(i)" 
+          ></ion-textarea>
+      </ion-item>
+    </ion-list>
+</ion-content>
